@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* reset de margens, preenchimentos e box-sizing padão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* estilos gerais body */
+body {
+    height: 100vh;
+    font-family: 'poppins', sans-serif;
+    background-color: #579749;
+}
+
+/* estilo do menu lateral fechado */
+nav.menu-lateral {
+    width: 80px;
+    height: 100%;
+    background-color: #579749;
+    padding: 18px 0 40px 6px; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: width 0.2s ease-in-out;
+}
+
+/* estilo do menu lateral quando passa o mouse */
+nav.menu-lateral:hover {
+    width: 280px;
+}
+
+/* botão menu */
+.btn-expandir {
+    width: 100%;
+    padding-left: 15px;
+    display: flex;
+    position: relative;
+    top: 0;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 38px;
+}
+
+/* icon do botão menu */
+.btn-expandir > i {
+    display: block;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+
+}
+
+/* estilo da lista do menu */
+ul {
+    height: 100%;
+    list-style-type: none;
+}
+
+/* estilo dos itens do menu */
+ul li.item-menu-lateral {
+    border-left: 0px solid white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: border-left 0.2s ease-in-out; 
+}
+
+/* estilo geral dos itens do menu */
+ul li.item-menu-lateral a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 4%;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    line-height: 40px;
+    transition: border-left 0.2s ease-in-out; 
+}
+
+ul li.item-menu-lateral a .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    min-height: 40px;
+}
+
+/* estilo dos icons do menu */
+ul li.item-menu-lateral a .icon > i {
+    font-size: 22px;
+    margin-left: 10px;
+    transition: color 0.2 ease-in-out;
+    vertical-align: middle;
+}
+
+/* estilo do texto do menu (escondido) */
+ul li.item-menu-lateral .txt-link {
+    font-size: 16px;
+    font-weight: 600;
+    display: none;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+/* mostra o texto quando o menu é expandido */
+nav.menu-lateral:hover ul li.item-menu-lateral .txt-link {
+    opacity: 1;
+    display: inline;
+}
+
+/* estilo hover dos itens do menu */
+ul li.item-menu-lateral:hover {
+    background-color: #fff;
+    border-left: 0px solid #6ec978;
+}
+
+/* altera a cor do texto e icon no hover */
+ul li.item-menu-lateral:hover a{
+    display: flex;
+    color: #16A34A;
+}
+
+ul li.item-menu-lateral:hover .icon i {
+    color: #16A34A;
+}
+
+/*Cabeçalho*/
+header {
+    display: flex;
+    height: 70px;
+    margin: 0 10px 0 80px;
+    background-color: #579749;
+    align-items: center;  
+    transition: margin-left 0.3s;
+}
+
+header h1 {
+    font-size: 26px;
+    color: #fff;
+    margin-left: 10px;
+}
+
+nav:hover ~ header {
+    margin-left: 300px;
+}
+
+
+/* Área principal da página */
+.main-content {
+    margin: 0 10px 0 80px; 
+    transition: 0.2s;
+    padding: 20px;
+    border-radius: 30px ;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border: 10px solid #e1dfdb;
+    min-height: 100vh;
+    background-color: #e1dfdb;
+    transition: margin-left 0.3s;
+}
+
+/* quando o menu expande, move o conteúdo principal */
+nav:hover ~ .main-content {
+    margin-left: 290px;
+}
+
+/* container dos cards medio */
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+/* estilo dos cards medio */
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    flex: 1 1 200px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+/* animação dos cards medio */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* estilo titulo card medio*/
+.card-title {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.card h2{
+    font-size: 20px;
+}
+
+.card p {
+    text-align: left;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* estilo do ícone dos cards medio */
+.card-icon {
+    padding: 10px;
+    font-size: 40px;
+    color: #77914e;
+}
+
+.imagens {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100vw; 
+}
+
+.imagens img {
+    width: 100%; 
+    height: auto;
+    border-radius: 20px; 
+    object-fit: cover; 
+}
+
