@@ -5,37 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartFarm</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./static/css/styles.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <i class="fa-solid fa-leaf"></i>
-            <h1>SmartFarm</h1>
+          <i class="fa-solid fa-leaf"></i>
+          <h1>SmartFarm</h1>
         </div>
-        <ul>
-            <a href="index.html">
-                <li>Home</li>
-            </a>
-            <a href="#">
-                <li>Sobre Nós</li>
-            </a>
-            <a href="#">
-                <li>Soluções</li>
-            </a>
-            <a href="#">
-                <li>Contato</li>
-            </a>
-            <a href="#">
-                <li>Página do Cliente</li>
-            </a>
+        <ul class="header_menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Sobre Nós</a></li>
+          <li><a href="#">Soluções</a></li>
+          <li><a href="#">Contato</a></li>
+          <li><a href="http://127.0.0.1:5000/login">Página do Cliente</a></li>
         </ul>
-    </header>
 
+      </header>
     <section class="introducao">
         <h2>Transformando a Agricultura com Tecnologia de Ponta</h2>
         <p>Oferecemos soluções avançadas para monitorar, otimizar e proteger suas safras</p>
-        <a href="#" target="_parent"><button class="btn_introducao">Cadastrar-se</button></a>
+        <button class="btn_introducao" onclick="window.location.href='http://127.0.0.1:5000/register'">Cadastrar-se</button>
     </section>
 
     <section class="solucoes">
