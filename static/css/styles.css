@@ -17,9 +17,18 @@ header {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 80px;
+    height: 60px;
     color: #fff;
     align-items: center;
+    position: fixed;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+header:hover {
+    background-color: #159945;
+    height: 80px;
+    transition: all 0.3s ease;
 }
 
 .logo {
@@ -37,10 +46,46 @@ header h1 {
     font-weight: 700;
 }
 
+.topNavBar {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .topNavBar a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    padding: 5px 0;
+    transition: color 0.5s ease;
+  }
+  
+  .topNavBar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #b5ebbd;
+    transition: width 0.5s ease;
+  }
+  
+  .topNavBar a:hover {
+    color: #b5ebbd;
+  }
+  
+  .topNavBar a:hover::after {
+    width: 100%;
+  }
+
+
 header ul {
     list-style: none;
     display: flex;
     gap: 18px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 header a {
@@ -71,6 +116,162 @@ header li:hover {
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.introducao_faleconosco {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 700px;
+    background-size: cover;
+    background-image: url(../img/foto_introducao.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.introducao_faleconosco h1,h2,h3,h4,h5{
+    color: #fff;
+    padding: 10px;
+}
+
+input {
+    padding: 12px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    outline: none;
+}
+
+.form_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    gap: 75px;
+    margin-top: 150px;
+  }
+  
+  .btn_send {
+    margin-top: 10px;
+    background-color: #139844;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 2px solid #139844;
+    border-radius: 30px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn_send:hover {
+    background-color: #33c96a;
+    border: 2px solid #33c96a;
+}
+
+.btn_send:active {
+    background-color: #0d692f;
+    color:#99e3a4
+}
+
+.div_form .btn_send {
+    display: flex;
+    justify-content: center;  /* Centraliza o botão horizontalmente */
+    align-items: center;
+}
+
+
+  .div_form,
+  .div_info {
+    overflow-y: auto;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid white;
+    color: #166534;
+    width: 25%;
+    height: 110%;
+    box-sizing: border-box;
+    box-shadow: -2px 2px 10px #0b492342;
+    transition: width 0.5s ease;
+    padding: 60px;
+    font-size: 16px;
+    line-height: 2.5;
+    overflow: hidden; /* Evita vazamentos */
+    position: relative;
+  }
+
+.div_explaining {
+    overflow-y: auto;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid white;
+    color: #166534;
+    width: 45%;
+    height: 60%;
+    box-sizing: border-box;
+    box-shadow: -2px 2px 10px #0b492342;
+    transition: width 0.5s ease;
+    padding: 60px;
+    font-size: 16px;
+    line-height: 2.5;
+    overflow: hidden; /* Evita vazamentos */
+    position: relative;
+}
+
+  .div_form *,
+.div_info * {
+  max-width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.div_form img {
+    box-shadow: -2px 2px 10px #0b492342;
+    width: 75%;
+    height: auto;
+    display: block;
+    margin-top: 20px;
+    transition: width 0.5s ease;
+  }
+.div_form img:hover {
+    width: 85%;
+    height: auto;
+    transition: width 0.5s ease;
+}
+
+  .div_form:hover,
+  .div_info:hover {
+    border-radius: 10px;
+    border: 2px solid white;
+    width: 26%;
+    height: 111%;
+    box-sizing: border-box;
+    box-shadow: -4px 4px 15px #0b492342;
+    transition: width 0.6s ease;
+  }
+
+  #mensagem_cliente {
+    height: 180px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    resize: none;
+    overflow-y: auto;
+    box-sizing: border-box;
+    font-family: inherit;
+  }
+
+  .icon_text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
 
 .introducao h2 {
     color: #fff;

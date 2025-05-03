@@ -25,6 +25,26 @@ body {
     overflow: hidden;
 }
   
+.introducao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    height: 100vh;      
+    text-align: center; 
+    color: white !important;
+}
+
+.introducao h1,
+.introducao h2,
+.introducao h3 {
+    color: white;
+}
+
+.div_form {
+    border: 2px solid black;
+}
+
 .iniciar, .inscrevase {
     flex: 1;
     display: flex;
@@ -90,6 +110,7 @@ a {
     border: 2px solid #139844;
     border-radius: 30px;
 }
+
 
 .btn {
     margin-top: 10px;
