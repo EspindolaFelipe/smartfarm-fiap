@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -124,7 +128,7 @@ header li:hover {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 700px;
+    height: 1000px;
     background-size: cover;
     background-image: url(../img/foto_introducao.jpg);
     background-repeat: no-repeat;
@@ -144,13 +148,41 @@ input {
     outline: none;
 }
 
+#fundo_blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 9998; 
+  }
+
+#div_popup {
+    text-align: center;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    padding: 50px;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    color: #139844;
+    max-width: 500px;
+    max-height: 500px;
+    font-weight: bold;
+    border-bottom: 2px solid #106b32;
+    z-index: 9999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
 .form_section {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 75vh;
     gap: 75px;
-    margin-top: 150px;
+    margin-bottom: 60px;
   }
   
   .btn_send {
@@ -179,7 +211,7 @@ input {
 
 .div_form .btn_send {
     display: flex;
-    justify-content: center;  /* Centraliza o botão horizontalmente */
+    justify-content: center;
     align-items: center;
 }
 
@@ -199,7 +231,7 @@ input {
     padding: 60px;
     font-size: 16px;
     line-height: 2.5;
-    overflow: hidden; /* Evita vazamentos */
+    overflow: hidden;
     position: relative;
   }
 
@@ -217,7 +249,7 @@ input {
     padding: 60px;
     font-size: 16px;
     line-height: 2.5;
-    overflow: hidden; /* Evita vazamentos */
+    overflow: hidden;
     position: relative;
 }
 
@@ -248,7 +280,7 @@ input {
     border-radius: 10px;
     border: 2px solid white;
     width: 26%;
-    height: 111%;
+    height: 110%;
     box-sizing: border-box;
     box-shadow: -4px 4px 15px #0b492342;
     transition: width 0.6s ease;
