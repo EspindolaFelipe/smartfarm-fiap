@@ -1,46 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartFarm</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/styles.css">
     <link rel="icon" type="image/png" href="static/img/smartfarm_icon.png">
 </head>
+
 <body>
-    <header>
-        <div class="logo">
-          <i class="fa-solid fa-leaf"></i>
-          <h1>SmartFarm</h1>
+    <header class="header">
+        <div class="content-header">
+            <div class="logo">
+                <i class="fa-solid fa-leaf"></i>
+                <h1>SmartFarm</h1>
+            </div>
+
+            <!-- Botão do menu (hamburguer) -->
+            <button class="menu-toggle" aria-label="Abrir menu"><i class="fa-solid fa-bars"></i></button>
+
+            <nav class="topNavBar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Soluções</a></li>
+                    <li><a href="pags/faleconosco.html">Fale Conosco</a></li>
+                    <li><a href="pags/login.html" target="_parent">Acessar Conta</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="topNavBar">
-          <a href="index.html">Home</a>
-          <a href="#">Sobre Nós</a>
-          <a href="#">Soluções</a>
-          <a href="fale_conosco.html">Contato</a>
-          <a href="login.html">Página do Cliente</a>
-    </div>
-      </header>
-    <section class="introducao">
+    </header>
+
+
+    <main class="main">
         <h2>Transformando a Agricultura com Tecnologia de Ponta</h2>
         <p>Oferecemos soluções avançadas para monitorar, otimizar e proteger suas safras</p>
-        <button class="btn_introducao" href="register.html">Cadastrar-se</button>
-    </section>
+        <a href="/pags/register.html" target="_parent"><button class="btn-main">Cadastrar-se</button></a>
+    </main>
+
 
     <section class="solucoes">
         <h2>Nossas Soluções para o Setor Agropecuário</h2>
         <ul>
-            <li>Assistente Inteligente: Conte com uma IA especializada para tomar decisões mais eficientes no campo.</li>
+            <li>Assistente Inteligente: Conte com uma IA especializada para tomar decisões mais eficientes no campo.
+            </li>
             <li>Monitoramento de Safra: Acompanhe o desenvolvimento das lavouras em tempo real com dados precisos.</li>
-            <li>Análise para a colheita: Descubra o momento ideal para colher com base em clima, maturação e histórico.</li>
-            <li>Análise de Mercado: Acompanhe o mercado e venda sua produção pelo melhor preço.</li>
             <li>Previsão Climática: Antecipe o clima e tome decisões mais seguras para sua produção.</li>
+            <li>Análise de Mercado: Acompanhe o mercado e venda sua produção pelo melhor preço.</li>
+            <li>Identificação de Pragas: Detecte pragas rapidamente e atue de forma eficiente.</li>
             <li>Otimização de Recursos: Use água e insumos de forma estratégica e sustentável.</li>
-            
-            
         </ul>
-        <button class="btn_solucoes">Saiba Mais Sobre a SmartFarm</button>
+        <button class="btn-solucoes">Saiba Mais Sobre a SmartFarm</button>
     </section>
 
     <section class="beneficios">
@@ -54,12 +67,14 @@
             <div class="card">
                 <i class="fa-solid fa-chart-line"></i>
                 <h3>Aumento de Produtividade</h3>
-                <p>Monitoramento inteligente que potencializa sua produção, identifica dificuldades e impulsiona resultados.</p>
+                <p>Monitoramento inteligente que potencializa sua produção, identifica dificuldades e impulsiona
+                    resultados.</p>
             </div>
             <div class="card">
                 <i class="fa-solid fa-leaf"></i>
                 <h3>Sustentabilidade</h3>
-                <p>Nossas soluções promovem práticas agrícolas conscientes, aliando produtividade ao cuidado com o meio ambiente.</p>
+                <p>Nossas soluções promovem práticas agrícolas conscientes, aliando produtividade ao cuidado com o meio
+                    ambiente.</p>
             </div>
             <div class="card">
                 <i class="fa-solid fa-database"></i>
@@ -70,19 +85,49 @@
     </section>
 
     <section class="ultima_chamada">
-        <h2>Mais controle, mais produtividade, menos desperdício</h2>
-        <p>Comece hoje a monitorar suas safras com tecnologia de ponta</p>
-        <a href="register.html"><button class="btn_ultimachamada"> Cadastrar-se Agora</button></a>
+        <div class="content-ultima-chamada">
+            <h2>Mais controle, mais produtividade, menos desperdício</h2>
+            <p>Comece hoje a monitorar suas safras com tecnologia de ponta</p>
+            <a href="./pags/homeclient.html"><button class="btn-ultimachamada"> Cadastrar-se Agora</button></a>
+        </div>
     </section>
 
-    <footer>
-        <ul>
-            <li>Sobre Nós</li>
-            <li>Suporte</li>
-            <li>Contato</li>
-            <li>Termos de Uso</li>
-        </ul>
-        <p>@2025 SmartFarm. Todos os direitos reservado.</p>
+    <footer class="footer">
+        <div class="footer-container">
+            <nav class="menu-footer">
+                <ul>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Suporte</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                </ul>
+            </nav>
+            <div class="footer-copy">
+                <p>&copy; 2025 SmartFarm. Todos os direitos reservado.</p>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const topNavBar = document.querySelector('.topNavBar');
+            const contentHeader = document.querySelector('.content-header');
+
+            // Verifique se os elementos estão sendo encontrados corretamente
+            console.log(menuToggle, topNavBar, contentHeader);
+
+            // Adiciona o evento de clique
+            menuToggle.addEventListener('click', () => {
+                console.log("Botão clicado!"); // Verifique se o evento está sendo disparado
+                topNavBar.classList.toggle('active');
+                contentHeader.classList.toggle('expanded');
+            });
+        });
+
+    </script>
+
+
+
 </body>
+
 </html>

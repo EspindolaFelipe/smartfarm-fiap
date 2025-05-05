@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartFarm</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="../javascript/main.js"></script>
+  <link rel="icon" type="image/png" href="static/img/smartfarm_icon.png">
+</head>
+
+<body>
+  <div id="fundo_blur" style="display: none;"></div>
+  <header class="header">
+    <div class="content-header">
+      <div class="logo">
+        <i class="fa-solid fa-leaf"></i>
+        <h1>SmartFarm</h1>
+      </div>
+
+      <!-- Botão do menu (hamburguer) -->
+      <button class="menu-toggle" aria-label="Abrir menu"><i class="fa-solid fa-bars"></i></button>
+
+      <nav class="topNavBar">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="#">Soluções</a></li>
+          <li><a href="faleconosco.html">Fale Conosco</a></li>
+          <li><a href="../pags/login.html" target="_parent">Acessar Conta</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-faleconosco">
+
+    <div id="div_popup" style="display: none;">
+      <i class="fa-solid fa-circle-check fa-5x"></i>
+      <p style="font-size: 32px;">Sucesso!</p>
+      <p>Sua solicitação foi registrada, entraremos em contato em breve!</p>
+      <button class="btn-faleconosco" onclick="fecharPopup()" style="width: auto; height: 55px;">Entendido!</button>
+    </div>
+    <div class="faleconosco-text">
+    <h2 style="font-size: 36px;">Fale Conosco!</h2>
+    <p style="font-size: 24px; font-weight: 500;">Na SmartFarm, estamos sempre prontos para ouvir você!</p>
+    <p style="font-size: 16px;">Entre em Contato e tire suas dúvidas!</p>
+  </div>
+    <a class="btn-faleconosco" href="#form-section" style="text-decoration: none;">Quero falar com alguém</a>
+    
+  </main>
+
+  <section class="form-section" id="form-section">
+
+    <div class="div-form" style="background-color: #eefff4; border-color: #90d0a6; line-height: 2.5;">
+      <div class="icon-text" style="gap: 20px; color: #166534;">
+        <i class="fa-solid fa-leaf fa-2x"></i>
+        <h3 style=" margin-left: 0px;"> Informações de Contato</h3>
+      </div>
+
+      <div class="icon-text" style="margin-left: 20px;">
+        <i class="fa-solid fa-envelope"></i>
+        <p style="margin-left: 10px;">contatosuporte@smartfarm.com</p>
+      </div>
+
+      <div class="icon-text" style="margin-left: 20px;">
+        <i class="fa-solid fa-phone"></i>
+        <p style="margin-left: 10px;">+55 (99) 99999-9999</p>
+      </div>
+
+      <div class="icon-text" style="margin-left: 20px;">
+        <i class="fa-brands fa-whatsapp"></i>
+        <p style="margin-left: 10px;">+55 (99) 99999-9999</p>
+      </div>
+
+      <div class="icon-text" style="margin-left: 20px">
+        <i class="fa-solid fa-location-dot"></i>
+        <p style="margin-left: 10px;">São Paulo, Brasil</p>
+      </div> 
+
+      <div class="map">
+        <img style="max-width: 400px; max-height: 300px; border-radius: 10px;" src="/img/img-map-faleconosco.png"
+          style="margin-left: 50px">
+      </div>
+
+    </div>
+
+    <div class="div-info">
+
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <i class="fa-solid fa-envelope-open-text fa-2x"></i>
+        <h3 style=" color: #166534;">Envie sua mensagem!</h3>
+      </div>
+
+      <form id="client_report_form">
+        <div class="dados">
+          <p>Nome Completo:</p>
+          <input id="nome_cliente" type="text" placeholder="Nome completo" required>
+        </div>
+        <div class="dados">
+          <p>Email</p>
+          <input id="email_cliente" type="email" placeholder="seuemail@exemplo.com" required>
+        </div>
+        <div class="dados">
+          <p>Telefone</p>
+          <input id="tel_cliente" type="tel" placeholder="(99) 99999-9999" required>
+        </div>
+        <div class="dados">
+          <p>Mensagem</p>
+          <textarea id="mensagem_cliente" placeholder="Digite sua mensagem "></textarea>
+        </div>
+        <div class="btn-send-centralizado"><button class="btn-send" onclick="sendFormReport(); mostrarPopup()">Enviar
+            Mensagem</button></div>
+      </form>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <nav class="menu-footer">
+        <ul>
+          <li><a href="#">Sobre Nós</a></li>
+          <li><a href="#">Suporte</a></li>
+          <li><a href="#">Termos de Uso</a></li>
+        </ul>
+      </nav>
+      <div class="footer-copy">
+        <p>&copy; 2025 SmartFarm. Todos os direitos reservado.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const topNavBar = document.querySelector('.topNavBar');
+      const contentHeader = document.querySelector('.content-header');
+
+      // Verifique se os elementos estão sendo encontrados corretamente
+      console.log(menuToggle, topNavBar, contentHeader);
+
+      // Adiciona o evento de clique
+      menuToggle.addEventListener('click', () => {
+        console.log("Botão clicado!"); // Verifique se o evento está sendo disparado
+        topNavBar.classList.toggle('active');
+        contentHeader.classList.toggle('expanded');
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>
