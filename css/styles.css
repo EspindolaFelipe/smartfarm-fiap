@@ -493,14 +493,7 @@ header:hover {
     font-size: 16px;
 }
 
-.div-form:hover, .div-info:hover {
-    border-radius: 10px;
-    border: 1px solid #5ad589;
-    width: 640px;
-    box-sizing: border-box;
-    box-shadow: -4px 4px 15px #0b492342;
-    transition: width 0.6s ease;
-}
+
 
 input {
     padding: 16px;
