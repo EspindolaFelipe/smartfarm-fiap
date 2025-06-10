@@ -3,7 +3,7 @@ function sendFormReport() {
     let clientReportEmail = document.getElementById('email_cliente').value;
     let clientReportTel = document.getElementById('tel_cliente').value;
     let clientReportMsg = document.getElementById('mensagem_cliente').value;
-    alert(clientReportName + '\n' + clientReportEmail + '\n' + clientReportTel + '\n' + clientReportMsg)
+    console.log(clientReportName + '\n' + clientReportEmail + '\n' + clientReportTel + '\n' + clientReportMsg)
 }
 
 function mostrarPopup() {

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/png" href="static/img/smartfarm_icon.png">
 </head>
 
@@ -28,17 +28,16 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#">Soluções</a></li>
                     <li><a href="pags/faleconosco.html">Fale Conosco</a></li>
-                    <li><a href="pags/login.html" target="_parent">Acessar Conta</a></li>
+                    <li><a href="pags/login.html" target="_parent">Login</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-
     <main class="main">
         <h2>Transformando a Agricultura com Tecnologia de Ponta</h2>
         <p>Oferecemos soluções avançadas para monitorar, otimizar e proteger suas safras</p>
-        <a href="/pags/register.html" target="_parent"><button class="btn-main">Cadastrar-se</button></a>
+        <a href="pags/register.html" target="_parent"><button class="btn-main">Cadastrar-se</button></a>
     </main>
 
 
@@ -59,27 +58,31 @@
     <section class="beneficios">
         <h2>Benefícios para Sua Fazenda</h2>
         <div class="cards">
-            <div class="card">
+            <div class="card" id="otimizacaoRecursos" onclick="">
                 <i class="fa-solid fa-droplet"></i>
                 <h3>Otimização de Recursos</h3>
                 <p>Tecnologia de precisão que reduz o desperdício, gerando economia e eficiência.</p>
+                <i class="fa-solid fa-ellipsis"></i>
             </div>
-            <div class="card">
+            <div class="card" id="aumentoProdutividade" onclick="">
                 <i class="fa-solid fa-chart-line"></i>
                 <h3>Aumento de Produtividade</h3>
                 <p>Monitoramento inteligente que potencializa sua produção, identifica dificuldades e impulsiona
                     resultados.</p>
+                    <i class="fa-solid fa-ellipsis" onclick=""></i>
             </div>
-            <div class="card">
+            <div class="card" id="sustentabilidade" onclick="">
                 <i class="fa-solid fa-leaf"></i>
                 <h3>Sustentabilidade</h3>
                 <p>Nossas soluções promovem práticas agrícolas conscientes, aliando produtividade ao cuidado com o meio
                     ambiente.</p>
+                    <i class="fa-solid fa-ellipsis" onclick=""></i>
             </div>
-            <div class="card">
+            <div class="card" id="decisoesBaseadasDados">
                 <i class="fa-solid fa-database"></i>
                 <h3>Decisões Baseadas em Dados</h3>
                 <p>Transforme dados em decisões estratégicas para aumentar a rentabilidade e reduzir riscos.</p>
+                <i class="fa-solid fa-ellipsis"></i>
             </div>
         </div>
     </section>

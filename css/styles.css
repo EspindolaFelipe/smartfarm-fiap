@@ -47,6 +47,11 @@ header {
     width: 100%;
 }
 
+.cards {
+    cursor: pointer;
+    user-select: none;
+}
+
 header:hover {
     background-color: #159945;
     height: 80px;
@@ -396,7 +401,7 @@ header:hover {
     height: 1000px;
     gap: 30px;
     background-size: cover;
-    background-image: url(/img/main-faleconosco.jpg) ;
+    background-image: url(../img/main-faleconosco.jpg) ;
     background-repeat: no-repeat;
     background-position: center;
 }
