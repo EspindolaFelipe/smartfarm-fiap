@@ -35,13 +35,13 @@
     </header>
 
     <main class="main">
-        <h2>Transformando a Agricultura com Tecnologia de Ponta</h2>
-        <p>Oferecemos soluções avançadas para monitorar, otimizar e proteger suas safras</p>
-        <a href="pags/register.html" target="_parent"><button class="btn-main">Cadastrar-se</button></a>
-    </main>
+        <section class="hero">
+            <h2>Transformando a Agricultura com Tecnologia de Ponta</h2>
+            <p>Oferecemos soluções avançadas para monitorar, otimizar e proteger suas safras</p>
+            <a href="pags/register.html" target="_parent"><button class="btn-hero">Cadastrar-se</button></a>
+        </section>
 
-
-    <section class="solucoes">
+        <section class="solucoes">
         <h2>Nossas Soluções para o Setor Agropecuário</h2>
         <ul>
             <li>Assistente Inteligente: Conte com uma IA especializada para tomar decisões mais eficientes no campo.
@@ -94,6 +94,10 @@
             <a href="./pags/homeclient.html"><button class="btn-ultimachamada"> Cadastrar-se Agora</button></a>
         </div>
     </section>
+    </main>
+
+
+    
 
     <footer class="footer">
         <div class="footer-container">
@@ -110,24 +114,7 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const topNavBar = document.querySelector('.topNavBar');
-            const contentHeader = document.querySelector('.content-header');
-
-            // Verifique se os elementos estão sendo encontrados corretamente
-            console.log(menuToggle, topNavBar, contentHeader);
-
-            // Adiciona o evento de clique
-            menuToggle.addEventListener('click', () => {
-                console.log("Botão clicado!"); // Verifique se o evento está sendo disparado
-                topNavBar.classList.toggle('active');
-                contentHeader.classList.toggle('expanded');
-            });
-        });
-
-    </script>
+    <script  src="javascript/main.js"></script>
 
 
 
