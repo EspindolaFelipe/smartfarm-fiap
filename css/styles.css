@@ -58,6 +58,32 @@ header:hover {
     transition: all 0.3s ease;
 }
 
+.popup-container {
+    text-align: center;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    padding: 50px;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    max-width: 600px;
+    max-height: 500px;
+    font-weight: bold;
+    border-bottom: 2px solid #106b32;
+    z-index: 9999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    color: #139844 !important;
+    border-radius: 5px;
+}
+
+.popup-container p {
+    color: #139844;
+}
+
+.popup-container i {
+    font-size: 45px;
+}
+
 .logo {
     display: flex;
     justify-content: space-between;

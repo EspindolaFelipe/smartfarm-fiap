@@ -35,6 +35,7 @@
     </header>
 
     <main class="main">
+         <div id="fundo_blur" style="display: none;">&nbsp;</div>
         <section class="hero">
             <h2>Transformando a Agricultura com Tecnologia de Ponta</h2>
             <p>Oferecemos soluções avançadas para monitorar, otimizar e proteger suas safras</p>
@@ -54,31 +55,77 @@
         </ul>
         <button class="btn-solucoes">Saiba Mais Sobre a SmartFarm</button>
     </section>
-
+    
     <section class="beneficios">
+
+        <div id="div_popupOtimizacaoRecursos" style="display: none;" class="popup-container">
+        <i class="fa-solid fa-droplet"></i>
+        <p style="font-size: 32px;">Otimização de Recursos</p>
+        <p>Com foco na redução de desperdícios, ela garante o uso inteligente de recursos, promovendo sustentabilidade e
+            responsabilidade operacional.
+            Ao otimizar processos, gera economia significativa e melhora a eficiência em todas as etapas da cadeia
+            produtiva.
+            Mais do que inovação, é uma aliada estratégica para quem busca desempenho, controle e crescimento
+            sustentável.</p>
+        <button class="btn-faleconosco" onclick="fecharPopup('div_popupOtimizacaoRecursos')" style="width: auto; height: 55px;">Entendido!</button>
+    </div>
+
+    <div id="div_popupAumentoProdutividade" style="display: none;" class="popup-container">
+        <i class="fa-solid fa-chart-line"></i>
+        <p style="font-size: 32px;">Aumento de Produtividade</p>
+        <p>Monitoramento inteligente que potencializa sua produção,
+            identifica com precisão as dificuldades ao longo do processo
+            e impulsiona os resultados de forma contínua e eficaz.
+            Mais do que acompanhar, ele atua como um aliado estratégico,
+            garantindo uma operação mais eficiente, segura e produtiva.</p>
+        <button class="btn-faleconosco" onclick="fecharPopup('div_popupAumentoProdutividade')" style="width: auto; height: 55px;">Entendido!</button>
+    </div>
+
+    <div id="div_popupSustentabilidade" style="display: none;" class="popup-container">
+        <i class="fa-solid fa-leaf"></i>
+        <p style="font-size: 32px;">Sustentabilidade</p>
+        <p>Nossas soluções promovem práticas agrícolas conscientes,
+            integrando tecnologia e responsabilidade em cada etapa do cultivo.
+            Unimos produtividade ao cuidado com o meio ambiente,
+            garantindo colheitas mais eficientes, sustentáveis e alinhadas com o futuro do agronegócio.
+            Porque produzir bem também é preservar.</p>
+        <button class="btn-faleconosco" onclick="fecharPopup('div_popupSustentabilidade')" style="width: auto; height: 55px;">Entendido!</button>
+    </div>
+
+    <div id="div_popupDecisoesBaseadasDados" style="display: none;" class="popup-container">
+        <i class="fa-solid fa-database"></i>
+        <p style="font-size: 32px;">Decisões Baseadas em Dados</p>
+        <p>Transforme dados em decisões estratégicas,
+            converta informações em ações inteligentes e focadas em resultado.
+            Aumente a rentabilidade do seu negócio com base em análises precisas
+            e reduza riscos por meio de uma gestão mais informada, segura e eficiente.
+            Porque cada dado certo pode ser o passo decisivo para o sucesso.</p>
+        <button class="btn-faleconosco" onclick="fecharPopup('div_popupDecisoesBaseadasDados')" style="width: auto; height: 55px;">Entendido!</button>
+    </div>
+
         <h2>Benefícios para Sua Fazenda</h2>
         <div class="cards">
-            <div class="card" id="otimizacaoRecursos" onclick="">
+            <div class="card" id="otimizacaoRecursos" onclick="mostrarPopup('div_popupOtimizacaoRecursos')">
                 <i class="fa-solid fa-droplet"></i>
                 <h3>Otimização de Recursos</h3>
                 <p>Tecnologia de precisão que reduz o desperdício, gerando economia e eficiência.</p>
                 <i class="fa-solid fa-ellipsis"></i>
             </div>
-            <div class="card" id="aumentoProdutividade" onclick="">
+            <div class="card" id="aumentoProdutividade" onclick="mostrarPopup('div_popupAumentoProdutividade')">
                 <i class="fa-solid fa-chart-line"></i>
                 <h3>Aumento de Produtividade</h3>
                 <p>Monitoramento inteligente que potencializa sua produção, identifica dificuldades e impulsiona
                     resultados.</p>
                     <i class="fa-solid fa-ellipsis" onclick=""></i>
             </div>
-            <div class="card" id="sustentabilidade" onclick="">
+            <div class="card" id="sustentabilidade" onclick="mostrarPopup('div_popupSustentabilidade')">
                 <i class="fa-solid fa-leaf"></i>
                 <h3>Sustentabilidade</h3>
                 <p>Nossas soluções promovem práticas agrícolas conscientes, aliando produtividade ao cuidado com o meio
                     ambiente.</p>
                     <i class="fa-solid fa-ellipsis" onclick=""></i>
             </div>
-            <div class="card" id="decisoesBaseadasDados">
+            <div class="card" id="decisoesBaseadasDados" onclick="mostrarPopup('div_popupDecisoesBaseadasDados')">
                 <i class="fa-solid fa-database"></i>
                 <h3>Decisões Baseadas em Dados</h3>
                 <p>Transforme dados em decisões estratégicas para aumentar a rentabilidade e reduzir riscos.</p>

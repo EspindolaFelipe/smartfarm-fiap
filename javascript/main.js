@@ -1,25 +1,31 @@
-document.addEventListener('DOMContentLoaded', function () {
-      const menuToggle = document.querySelector('.menu-toggle');
-      const topNavBar = document.querySelector('.topNavBar');
-      const contentHeader = document.querySelector('.content-header');
-
-      // Verifique se os elementos estão sendo encontrados corretamente
-      console.log(menuToggle, topNavBar, contentHeader);
-
-      // Adiciona o evento de clique
-      menuToggle.addEventListener('click', () => {
-        console.log("Botão clicado!"); // Verifique se o evento está sendo disparado
-        topNavBar.classList.toggle('active');
-        contentHeader.classList.toggle('expanded');
-      });
-    });
-
-
 
 // Form
 document.addEventListener("DOMContentLoaded", function () {
+  renderMenu();
+  renderInputs();
+});
+
+function renderMenu() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const topNavBar = document.querySelector('.topNavBar');
+  const contentHeader = document.querySelector('.content-header');
+
+  // Verifique se os elementos estão sendo encontrados corretamente
+  console.log(menuToggle, topNavBar, contentHeader);
+
+  // Adiciona o evento de clique
+  menuToggle?.addEventListener('click', () => {
+    console.log("Botão clicado!"); // Verifique se o evento está sendo disparado
+    topNavBar.classList.toggle('active');
+    contentHeader.classList.toggle('expanded');
+  });
+
+}
+
+function renderInputs() {
+  
   const telefoneInput = document.getElementById("requesterTel");
-  telefoneInput.addEventListener("input", function () {
+  telefoneInput?.addEventListener("input", function () {
     let value = telefoneInput.value.replace(/\D/g, "");
     if (value.length > 11) value = value.slice(0, 11);
 
@@ -33,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Validação e envio do formulário
-  document.getElementById("contactForm").addEventListener("submit", function (event) {
+  document.getElementById("contactForm")?.addEventListener("submit", function (event) {
     event.preventDefault();
 
     const nomeCompleto = document.getElementById("requesterName").value.trim();
@@ -75,23 +81,23 @@ document.addEventListener("DOMContentLoaded", function () {
     
     if (!valido) return;
 
-mostrarPopup();
-sendFormReport();
+  mostrarPopup('div_popup');
+  sendFormReport();
   });
-});
-
-function mostrarPopup() {
-  const popup = document.getElementById("div_popup");
+}
+function mostrarPopup(id) {
+  const popup = document.getElementById(id);
   const fundo = document.getElementById("fundo_blur");
-
+  
+  console.log("pop", popup, fundo)
   if (popup && fundo) {
-    popup.style.display = "flex";
+    popup.style.display = "block";
     fundo.style.display = "block";
   }
 }
 
-function fecharPopup() {
-  const popup = document.getElementById("div_popup");
+function fecharPopup(id, callback) {
+  const popup = document.getElementById(id);
   const fundo = document.getElementById("fundo_blur");
 
   if (popup && fundo) {
@@ -99,6 +105,15 @@ function fecharPopup() {
     fundo.style.display = "none";
   }
 
+  if(callback){
+    callback();
+  }
+
+}
+
+
+const limparForm = () => {
+  
   // Limpar o formulário
   document.getElementById("contactForm").reset();
 
@@ -108,5 +123,3 @@ function fecharPopup() {
   document.getElementById("erroEmail").style.display = "none";
   document.getElementById("erroMensagem").style.display = "none";
 }
-
-
